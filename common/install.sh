@@ -1,3 +1,4 @@
+GAMEUSERSETTINGS_FILE=/data/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/FortniteGame/Saved/Config/Android/GameUserSettings.ini
 TEXT1="GameUnlocker Unlock Max Game Graphic And FPS In $(getprop ro.product.system.brand) Devices. "
 TEXT2="𝗨𝗻𝗹𝗼𝗰𝗸𝗲𝗿 𝗠𝗼𝗱𝗲: "
 cat << "EOF"
@@ -38,6 +39,8 @@ sleep 0.2
 ui_print " 4. Arena Of Valor - Max Settings "
 sleep 0.2
 ui_print " 5. COD Mobile - 120FPS "
+sleep 0.2
+ui_print " 6. Fortnite - Doesn't change device model "
 ui_print ""
 sleep 0.2
 ui_print " Select Unlocker: "
@@ -49,7 +52,7 @@ while true; do
 	else 
 		break
 	fi
-	if [ $GU -gt 5 ]; then
+	if [ $GU -gt 6 ]; then
 		GU=1
 	fi
 done
@@ -61,6 +64,7 @@ case $GU in
  3 ) TEXT3="✓ML And LOL "; FCTEXT="Mobile Legends And League Of Legends"; sed -i '/ro.product.model/s/.*/ro.product.model=A2218/' $MODPATH/system.prop; sed -i '/ro.product.odm.model/s/.*/ro.product.odm.model=A2218/' $MODPATH/system.prop; sed -i '/ro.product.system.model/s/.*/ro.product.system.model=A2218/' $MODPATH/system.prop; sed -i '/ro.product.vendor.model/s/.*/ro.product.vendor.model=A2218/' $MODPATH/system.prop; sed -i '/ro.product.system_ext.model/s/.*/ro.product.system_ext.model=A2218/' $MODPATH/system.prop;;
  4 ) TEXT3="✓AOV "; FCTEXT="Arena Of Valor"; sed -i '/ro.product.model/s/.*/ro.product.model=R11 Plus/' $MODPATH/system.prop; sed -i '/ro.product.odm.model/s/.*/ro.product.odm.model=R11 Plus/' $MODPATH/system.prop; sed -i '/ro.product.system.model/s/.*/ro.product.system.model=R11 Plus/' $MODPATH/system.prop; sed -i '/ro.product.vendor.model/s/.*/ro.product.vendor.model=R11 Plus/' $MODPATH/system.prop; sed -i '/ro.product.system_ext.model/s/.*/ro.product.system_ext.model=R11 Plus/' $MODPATH/system.prop;;
  5 ) TEXT3="✓CODM "; FCTEXT="COD Mobile"; sed -i '/ro.product.model/s/.*/ro.product.model=SO-52A/' $MODPATH/system.prop; sed -i '/ro.product.odm.model/s/.*/ro.product.odm.model=SO-52A/' $MODPATH/system.prop; sed -i '/ro.product.system.model/s/.*/ro.product.system.model=SO-52A/' $MODPATH/system.prop; sed -i '/ro.product.vendor.model/s/.*/ro.product.vendor.model=SO-52A/' $MODPATH/system.prop; sed -i '/ro.product.system_ext.model/s/.*/ro.product.system_ext.model=SO-52A/' $MODPATH/system.prop;;
+ 6 ) TEXT3="✓FORTNITE "; FCTEXT="Fortnite"; chmod 0777 $GAMEUSERSETTINGS_FILE; magiskhide enable; magiskhide add com.epicgames.fortnite; settings put global adb_enabled 0; mv /data/media/0/TWRP /data/media/0/PRWT; mv /data/media/0/Download/magisk_patched.img /data/media/0/Download/ksigam_dehctap.img; am force-stop com.epicgames.fortnite; sed -i -e 's/MobileFPSMode=Mode_20Fps/MobileFPSMode=Mode_60Fps/g' $GAMEUSERSETTINGS_FILE; sed -i -e 's/MobileFPSMode=Mode_30Fps/MobileFPSMode=Mode_60Fps/g'  $GAMEUSERSETTINGS_FILE; sed -i -e 's/MobileFPSMode=Mode_45Fps/MobileFPSMode=Mode_60Fps/g'  $GAMEUSERSETTINGS_FILE; sed -i -e 's/MobileFPSMode=Mode_60Fps/MobileFPSMode=Mode_60Fps/g'  $GAMEUSERSETTINGS_FILE; sed -i -e 's/MobileFPSMode=Mode_120Fps/MobileFPSMode=Mode_60Fps/g'  $GAMEUSERSETTINGS_FILE;;
 esac
 ui_print ""
 ui_print "- MODE: $FCTEXT "
