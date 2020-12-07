@@ -8,6 +8,7 @@
 
 ### Version: vFINAL
 
+- Fixed Module Not Applied Issue
 - Added PUBG Mobile - 90FPS Settings
 - Added COD Mobile, Asphalt & Blade&Soul Revolution - Max Settings
 - Added COD Mobile - 120FPS Settings
