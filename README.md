@@ -1,12 +1,13 @@
-##### Introduction: GameUnlocker | Magisk Module
+##### Introduction: Unlocker | Magisk Module
 
 ##### Contact: [Akira](https://t.me/AkiraRelease)
 
 ##### Support: Universal
 
-#### Note: Unlock game graphic and fps such as Call of Duty Mobile, PUBG, Asphalt, Blade&Soul Revolution, Mobile Legends, Black Desert Mobile, Arena Of Valor Not Working if You're using MagiskHide Props. Or others similar Modules with it. Not Work for All Games, causing SafetyNet fail. Need Xposed module to fix or bypass SafetyNet. It may break some system Apps, such as Miui Camera, Package Installer and etc.
+#### Note: Unlock Game Graphics/FPS. This module will not work if You're using MagiskHide Props. Or others similar Modules with it. Not Work for All Games, causing SafetyNet fail. Need Xposed module to fix or bypass SafetyNet. It may break some system Apps, such as Miui Camera, Package Installer and etc.
 
-##### Yes, works on all ROMs and on all firmwares.
+
+
 
 ##### ✓ INSTALLATION: Just flash via Magisk and reboot
 
