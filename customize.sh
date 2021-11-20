@@ -5,6 +5,7 @@ TEXT2="𝗨𝗻𝗹𝗼𝗰𝗸𝗲𝗿 𝗠𝗼𝗱𝗲: "
 RM_RF() {
 rm -rf $MODPATH/LICENSE 2>/dev/null
 rm -rf $MODPATH/README.md 2>/dev/null
+rm -rf $MODPATH/addon 2>/dev/null
 }
 MODPRINT() {
 ui_print ""
@@ -58,7 +59,6 @@ unzip -o "$ZIPFILE" post-fs-data.sh -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'addon/*' -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 . $MODPATH/addon/Volume-Key-Selector/install.sh
-RM_RF
 }
 MODPERM() {
 set_perm_recursive $MODPATH 0 0 0755 0644
@@ -98,3 +98,4 @@ else
     set +x
     abort
 fi
+RM_RF
