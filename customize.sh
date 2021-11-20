@@ -2,6 +2,10 @@ UM=1
 SKIPUNZIP=1
 TEXT1="Unlock Max Game Graphics/FPS Mode In $(getprop ro.product.system.brand) Device. "
 TEXT2="𝗨𝗻𝗹𝗼𝗰𝗸𝗲𝗿 𝗠𝗼𝗱𝗲: "
+RM_RF() {
+rm -rf $MODPATH/LICENSE 2>/dev/null
+rm -rf $MODPATH/README.md 2>/dev/null
+}
 MODPRINT() {
 ui_print ""
 ui_print "  ╭━━┳╮╭╮╱╱╱╱╭━━╮ "
@@ -54,6 +58,7 @@ unzip -o "$ZIPFILE" post-fs-data.sh -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'addon/*' -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 . $MODPATH/addon/Volume-Key-Selector/install.sh
+RM_RF
 }
 MODPERM() {
 set_perm_recursive $MODPATH 0 0 0755 0644
@@ -66,7 +71,7 @@ while true; do
 	else 
 		break
 	fi
-	if [ $UM -gt 7 ]; then
+	if [ $UM -gt 9 ]; then
 		UM=1
 	fi
 done
