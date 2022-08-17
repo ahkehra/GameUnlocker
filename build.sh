@@ -14,3 +14,9 @@ if [[ "$build_mode" == "release" ]]; then
 fi
 ndk-build -j4 NDK_DEBUG=$debug_mode
 popd
+
+rm -rf out
+mkdir -p out
+cp -af magisk-module out
+mv -fT native/libs out/magisk-module/libs
+zip -r9 out/magisk-module-release.zip out/magisk-module
