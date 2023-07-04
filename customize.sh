@@ -51,12 +51,8 @@ rPERM
 }
 rEXT() {
 ui_print "- Extracting module files"
-unzip -o "$ZIPFILE" module.prop -d $MODPATH >&2
-unzip -o "$ZIPFILE" system.prop -d $MODPATH >&2
 unzip -o "$ZIPFILE" post-fs-data.sh -d $MODPATH >&2
-unzip -o "$ZIPFILE" service.sh -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'addon/*' -d $MODPATH >&2
-unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 . $MODPATH/addon/Volume-Key-Selector/install.sh
 }
 rPERM() {
