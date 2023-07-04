@@ -1,6 +1,6 @@
-##### Introduction: Unlocker | Magisk Module
+##### Introduction: GameUnlocker | Magisk/KSU Module
 
-##### Contact: [Akira](https://t.me/AkiraRelease)
+##### Contact: [Akera](https://t.me/itzakera)
 
 ##### Support: Universal
 
