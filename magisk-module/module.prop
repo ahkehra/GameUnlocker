@@ -1,6 +1,6 @@
-id=example_module
-name=Example module
-author=HuskyDG
-version=1.0
+id=gameunlocker
+name=GameUnlocker
+author=oiAKERA
+version=v1.0
 versionCode=1
-description=module that add some stuff
+description=Unlock Max Game "Graphics/FPS" Mode.
